@@ -118,6 +118,7 @@ The same has to be done on the board with the following settings:
 
 ```sh
 # echo -e "auto eth0\niface eth0 inet static\naddress 192.168.1.200\nnetmask 255.255.255.0\ngateway 192.168.1.200 " >> /etc/network/interfaces
+# echo "nameserver 8.8.8.8\n" >> /etc/resolv.conf
 ```
 
 With this configuration, an internet connection on the microzed board can get established by executing the following commands as root. (Has to be done after every reboot of the virtual machine.)
