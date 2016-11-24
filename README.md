@@ -114,6 +114,12 @@ To connect the adapter2 to the board, the network has to get configured as follo
 $ sudo echo -e "auto eth1\niface eth1 inet static\naddress 192.168.1.200\nnetmask 255.255.255.0\n" >> /etc/network/interfaces
 ```
 
+The same has to be done on the board with the following settings:
+
+```sh
+x echo -e "auto eth0\niface eth0 inet static\naddress 192.168.1.200\nnetmask 255.255.255.0\ngateway 192.168.1.200 " >> /etc/network/interfaces
+```
+
 With this configuration, an internet connection on the microzed board can get established by executing the following commands as root. (Has to be done after every reboot of the virtual machine.)
 
 ```sh
